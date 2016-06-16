@@ -1,0 +1,48 @@
+{
+  "name": "octopus_dashboard",
+  "version": "1.0.0",
+  "description": "A web dashboard that accompanies Slacktopus",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "webpack-dev-server --inline --content-base public/ --history-api-fallback",
+    "start:prod": "webpack && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brandonfujii/octopus-dashboard.git"
+  },
+  "author": "Brandon Fujii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonfujii/octopus-dashboard/issues"
+  },
+  "homepage": "https://github.com/brandonfujii/octopus-dashboard#readme",
+  "dependencies": {
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "firebase": "^3.0.5",
+    "if-env": "^1.0.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.7",
+    "react-flip-move": "^2.3.0",
+    "react-router": "^2.0.0",
+    "react-sortable-hoc": "0.0.1",
+    "reactfire": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "dotenv": "^2.0.0",
+    "file-loader": "^0.8.5",
+    "http-server": "^0.8.5",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
